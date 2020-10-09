@@ -192,13 +192,26 @@ function checkFee(newFee){
     }
 }
 
+function navbarHashChange(){
+        if (location.hash == "#about") {
+            document.getElementById('aboutAnchorLi').classList.add('active');
+            document.getElementById('homeAnchorLi').classList.remove('active');
+        } else {
+            document.getElementById('aboutAnchorLi').classList.remove('active');
+            document.getElementById('homeAnchorLi').classList.add('active');
+        }
+    }
+
 function onLoad(){
+    window.onhashchange = navbarHashChange;
     document.getElementById('newFeeSlider').oninput = function() { // update fee
         var newFee = (1.12 ** Number(this.value) / 10**8).toFixed(8); // 1.12^[1-150] = []
         document.getElementById('newFeeBTCField').value = newFee;
         document.getElementById('newFeeUSDField').value = (newFee * BTCUSD).toFixed(2);
         checkFee(newFee);
     }
+
+    navbarHashChange();
 }
 
 function genTX(){
