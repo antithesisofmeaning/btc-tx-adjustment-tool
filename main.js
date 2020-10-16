@@ -32,9 +32,8 @@ var oldFee = ""; // in sat
 var addrIDInTX = ""; //addr ID in old TX
 var oldScript = "";
 var TXToAdjust = ""; // hash of the TX being adjusted
-var newtx = coinjs.transaction();
 var estimatedTxSize = 10; // <4:version><1:txInCount><1:txOutCount><4:nLockTime>
-
+var newtx = "";
 
 function fetchAddrData(address) {
     var Url = "https://api.blockcypher.com/v1/btc/main/addrs/" + address + "?limit=10";
@@ -51,6 +50,9 @@ function fetchRedeemAddrData() {
 
 function fetchTXs() {
     error = 0;
+    newtx = "";
+    newtx = coinjs.transaction();
+    location.hash = "#home";
     document.getElementById('unconfirmedTXsTableDiv').innerHTML = ""; // clear divs
     document.getElementById('unconfirmedTXProperties').innerHTML = "";
     document.getElementById('addressAlertBox').innerHTML = "";
@@ -59,6 +61,7 @@ function fetchTXs() {
     document.getElementById('unconfirmedTXTableDiv').setAttribute('style', 'display: none;');
     document.getElementById('inputsTableBody').innerHTML = "";
     document.getElementById('outputsTableBody').innerHTML = "";
+    document.getElementById('unconfirmedTXsTableDiv').setAttribute('style', '');
 
 
     redeemAddr = document.getElementById('redeemFrom').value;
@@ -127,6 +130,7 @@ function handleUnconfirmedTXsRadioChange(radio) {
 
     document.getElementById('newFeeSlider').value = Math.round(baseLog(1.12, oldFee * 5)); // calculate range value from Fee*5
     handleRangeChange();
+    document.getElementById('unconfirmedTXProperties').setAttribute('style', '');
 
     //newtx = coinjs.transaction(); // remove applied settings from previous transaction selections
 }
@@ -180,7 +184,7 @@ function onLoad() {
 }
 
 function genTX() {
-
+    document.getElementById('transactionHexField').value = "";
     var newFee = Number(document.getElementById('newFeeBTCField').value);
     var amountToSend = spentOutputValue / 10 ** 8 - newFee;
 
@@ -194,6 +198,13 @@ function genTX() {
     document.getElementById('transactionHexField').value = newtx.serialize();
     document.getElementById('txSize').innerHTML = newtx.size();
     document.getElementById('newTransactionDiv').setAttribute('style', '');
+
+    document.getElementById('unconfirmedTXsTableDiv').setAttribute('style', 'display: none;');
+    document.getElementById('unconfirmedTXProperties').setAttribute('style', 'display: none;');
+    document.getElementById('unconfirmedTXTableDiv').setAttribute('style', 'display: none;');
+    document.getElementById('newTXDiv').setAttribute('style', 'display: none;');
+
+    location.hash = "#doneTransaction";
 }
 
 function addInput(spentTX, indexInTX, currentScript) {

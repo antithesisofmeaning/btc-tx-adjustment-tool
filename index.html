@@ -11,52 +11,8 @@
 
     <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <style>
-        body {
-            font-family: "Lucida Console", Monaco, monospace;
-            color: #fff !important;
-        }
-
-        body h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            color: #f2f2f2;
-            font-family: "Lucida Console", Monaco, monospace;
-        }
-
-        a.anchor {
-            display: block;
-            position: relative;
-            top: -250px;
-            visibility: hidden;
-        }
-
-        #unconfirmedTXsTable {
-            font-size: 13px !important;
-        }
-
-        ul {
-            padding-inline-start: 20px !important;
-        }
-
-        .cntr {
-            width: 60%;
-            margin: 0 auto;
-        }
-
-        #InsnOutsDiv .form-control:disabled,
-        #InsnOutsDiv .form-control[readonly],
-        #newFeeBTCField[readonly],
-        #newFeeUSDField[readonly] {
-            background-color: #e1e1e1;
-        }
-    </style>
+    <style>body{font-family:"Lucida Console", Monaco, monospace;color:#fff !important}body h1,h2,h3,h4,h5,h6,p{color:#f2f2f2;font-family:"Lucida Console", Monaco, monospace}a.anchor{display:block;position:relative;top:-250px;visibility:hidden}#unconfirmedTXsTable{font-size:13px !important}ul{padding-inline-start:20px !important}.cntr{width:60%;margin:0 auto}#InsnOutsDiv .form-control:disabled,#InsnOutsDiv .form-control[readonly],#newFeeBTCField[readonly],#newFeeUSDField[readonly]{background-color:#e1e1e1}</style>
 
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/transition.js"></script>
@@ -134,7 +90,7 @@
                 </div>
 
                 <div class="form-group mx-sm-3 mb-2">
-                    <button id="btn" class="btn btn-primary">Submit</button>
+                    <button id="submBtn" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
@@ -198,8 +154,9 @@
                         </div>
                     </div>
                 </div>
-                <button id="btn" class="btn btn-primary btn-lg btn-block">Generate</button>
+                <button id="genBtn" class="btn btn-primary btn-lg btn-block">Generate</button>
             </form>
+        </div>
 
 
             <div id="newTransactionDiv" style="display: none;" class="mt-4">
@@ -213,7 +170,7 @@
                 </div>
 
                 <div id="signDiv" class="mt-4">
-                    <h3>Signing the transaction</h3>
+                    <h4>Signing the transaction</h4>
                     <p>The transaction above should be signed and broadcasted in order to be accepted and outrun the old one. Below are the ways of doing it.</p>
                     <ul>
                         <li>If you have the private key of the address:
@@ -232,23 +189,22 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
 
-                <div id="broadcastDiv" class="mt-4">
-                    <h3>Broadcasting the transaction</h3>
-                    <p>Once signed, the new transaction should be broadcasted in order to appear in mempool and be accepted. Below are suitable tools.</p>
-                    <ul>
-                        <li><a href="https://coinb.in/#broadcast">Coinb.in - Broadcast Transaction into the bitcoin network</a></li>
-                        <li><a href="https://www.viabtc.com/tools/broadcast">ViaBTC - Transaction Broadcast</a></li>
-                        <li><a href="https://www.blockchain.com/btc/pushtx">Blockchain.info - Broadcast Transaction</a></li>
-                    </ul>
-                    <p>Additionally, once a transaction has been broadcasted, it is possible to use a transaction accelerator in order to get faster confirmation.
-                        <li><a href="https://bitaccelerate.com/">BitAccelerate.com</a></li>
-                        <li><a href="https://www.viabtc.com/tools/txaccelerator">ViaBTC - Transaction Accelerator</a></li>
-                    </p>
+                    <div id="broadcastDiv" class="mt-4">
+                        <h4>Broadcasting the transaction</h4>
+                        <p>Once signed, the new transaction should be broadcasted in order to appear in mempool and be accepted. Below are suitable tools.</p>
+                        <ul>
+                            <li><a href="https://coinb.in/#broadcast">Coinb.in - Broadcast Transaction into the bitcoin network</a></li>
+                            <li><a href="https://www.viabtc.com/tools/broadcast">ViaBTC - Transaction Broadcast</a></li>
+                            <li><a href="https://www.blockchain.com/btc/pushtx">Blockchain.info - Broadcast Transaction</a></li>
+                        </ul>
+                        <p>Additionally, once a transaction has been broadcasted, it is possible to use a transaction accelerator in order to get faster confirmation.
+                            <li><a href="https://bitaccelerate.com/">BitAccelerate.com</a></li>
+                            <li><a href="https://www.viabtc.com/tools/txaccelerator">ViaBTC - Transaction Accelerator</a></li>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
+                </div>
 
 
         <a class="anchor mt-4" id="about"></a>
