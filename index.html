@@ -102,7 +102,7 @@
 
 <div class="container" style="max-width: 75%; margin-top: 150px;">
 	<a class="anchor" id="home"></a>
-	<center><h2>Unconfirmed Bitcoin Transaction Adjustment Tool</h2></center>
+	<center><h3>Unconfirmed Bitcoin Transaction Adjustment Tool</h3></center>
 
 	<a class="anchor" id="step1"></a>
 	<div class="alert alert-dismissible alert-secondary mt-4">
@@ -163,15 +163,15 @@
 	</div>
 
 	<div id="newTXDiv" style="display: none;" class="mt-4">
-		<h3>New transaction</h3>
+		<h4>New transaction</h4>
 		<form onsubmit="event.preventDefault(); genTX();" class="mt-1 ml-4">
 			<div class="form-group mb-4">
-				<h4>Recipient address</h4>
+				<h5>Recipient address</h5>
 				<input id="newRecipientAddress" class="form-control" type="text" autocomplete="on" pattern="^(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$" placeholder="Recipient address" required="" autofocus="" />
 			</div>
 			
 			<div class="form-group mb-4">
-				<h4>Fee</h4>
+				<h5>Fee</h5>
 				<div class="alert alert-dismissible alert-secondary">
   				<strong>Attention!</strong> In order to outrun the old transaction, it is recommended to increase the fee several-fold. By default, it is increased x5.
 				</div>
@@ -198,7 +198,7 @@
 
 		<div id="newTransactionDiv" style="display: none;" class="mt-4">
 			<a class="anchor" id="doneTransaction"></a>
-			<h3>Transaction</h3>
+			<h4>Transaction</h4>
 			<p>The transaction below has been generated and encoded. It can be broadcasted once it has been signed. You can check its contents here: <a href="https://coinb.in/#verify">Coinb.in - Verify transactions and other scripts</a></p>
 			<div class="alert alert-dark">
 				<br>
@@ -247,7 +247,7 @@
 
 	<a class="anchor mt-4" id="about"></a>
 	<div>
-		<h3>About</h3>
+		<h4>About</h4>
 		<p>- <strong>What can this tool do?</strong><br>- It allows to adjust unconfirmed Bitcoin transactions.</p>
 		<p>- <strong>How can it help me?</strong><br>- In a situation where you accidentally sent your bitcoins to a wrong address. Using this tool you can generate a new transaction with different output address and higher fee. As a result you will be able to outpace the old transaction.</p>
 		<p>- <strong>What fee should I set?</strong><br>- It definitely must be higher than the old one and the higher, the better. By default is it set to x5.</p>
@@ -256,7 +256,7 @@
 
 	<a class="anchor mt-4" id="resources"></a>
 	<div>
-		<h3>Resources</h3>
+		<h4>Resources</h4>
 		<p>Tools and services used on this page</p>
 		<ul>
 			<li><a href="https://coinb.in">Coinb.in</a> — Transaction decoding and generation</li>
@@ -269,12 +269,12 @@
 
 	<a class="anchor mt-4" id="donate"></a>
 	<div style="margin-bottom: 100px;">
-		<h3>Donate</h3>
+		<h4>Donate</h4>
 			<center>
 				<a href="bitcoin:1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2">
-					<p><img src="img/1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2.png" width="300" style="border: 5px solid #fff;"/></p>
+					<p><img src="img/1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2.png" width="30%" style="border: 5px solid #fff;"/></p>
 				</a>
-					<h5><p class="text-primary">1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2</p></h5>
+					<p class="text-primary">1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2</p>
 			</center>
 	</div>
 
