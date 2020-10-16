@@ -27,5 +27,4 @@ Tools and services used on this page
 - [explorer.btc21.org](https://explorer.btc21.org) — Bitcoin explorer
 
 ## Donate
-[![](https://pyzhyk.github.io/btc-tx-adjustment-tool/img/1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2.png)](bitcoin:1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2)
-1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2
+[BTC 1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2](bitcoin:1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2)
