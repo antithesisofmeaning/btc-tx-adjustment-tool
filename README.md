@@ -1,6 +1,6 @@
-## Unconfirmed Bitcoin Transaction Adjustment Tool
+# Unconfirmed Bitcoin Transaction Adjustment Tool
 
-#### About
+## About
 Q: **What can this tool do?**
 
 A: It allows to adjust unconfirmed Bitcoin transactions.
@@ -17,7 +17,7 @@ Q: **Can I trust this service?**
 
 A: Don't trust. Verify. This tool works on pure JavaScript and is running on your computer. You sign the transaction yourself, so this tool doesn't have access to your private keys. Moreover, the source code is open and can be found here: [github.com/pyzhyk/btc-tx-adjustment-tool](https://github.com/pyzhyk/btc-tx-adjustment-tool)
 
-#### Resources
+## Resources
 Tools and services used on this page
 
 - [Coinb.in](https://coinb.in) — Transaction decoding and generation
@@ -26,6 +26,6 @@ Tools and services used on this page
 - [BlockStream.info](https://blockstream.info) — Address and transaction info
 - [explorer.btc21.org](https://explorer.btc21.org) — Bitcoin explorer
 
-#### Donate
+## Donate
 [![](https://pyzhyk.github.io/btc-tx-adjustment-tool/img/1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2.png)](bitcoin:1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2)
 1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2
