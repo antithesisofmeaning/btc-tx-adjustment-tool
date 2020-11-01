@@ -31,4 +31,4 @@ Tools and services used on this page
 - [explorer.btc21.org](https://explorer.btc21.org) — Bitcoin explorer
 
 ## Donate
-[BTC 1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2](bitcoin:1Lvgum1ZYStpiEnBDGHpyv4B4C8JxE5jw2)
+[donate.pyzhyk.org](https://donate.pyzhyk.org)
