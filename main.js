@@ -177,7 +177,7 @@ function handleRangeChange() { // update fee
 }
 
 function onLoad() {
-    document.getElementById("redeemFrom").autofocus;
+    //document.getElementById("redeemFrom").autofocus;
     window.onhashchange = navbarHashChange;
     document.getElementById('newFeeSlider').oninput = handleRangeChange;
     navbarHashChange();
